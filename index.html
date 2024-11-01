@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Презентация Благодарности</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://th.bing.com/th/id/R.61e2517caed85e07b31ab5609eff958d?rik=jeEd14KrK6l8qQ&pid=ImgRaw&r=0') no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(5px);
+            z-index: -1;
+            opacity: 0.85;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(15px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        h1 {
+            font-size: 2.8rem;
+            color: #ffdb4d;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            margin-bottom: 15px;
+            animation: slideDown 0.5s ease forwards;
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .project-info {
+            font-size: 1.2rem;
+            color: #eaeaea;
+            margin-top: 15px;
+            opacity: 0;
+            animation: textAnimation 0.5s ease forwards;
+            transition: opacity 0.5s ease;
+        }
+        .project-info ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+            text-align: left;
+        }
+        .project-info li {
+            margin: 5px 0;
+        }
+        @keyframes textAnimation {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
+        }
+        button {
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(145deg, #ff9a9e, #fad0c4);
+            color: #141414;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(250, 208, 196, 0.5);
+            animation: bounce 0.5s ease infinite alternate;
+        }
+        button:hover {
+            background: linear-gradient(145deg, #fad0c4, #ff9a9e);
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(250, 208, 196, 0.7);
+        }
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-5px); }
+        }
+        .slide {
+            display: none;
+            opacity: 0;
+            animation: slideIn 0.5s ease-out forwards;
+        }
+        .slide.active {
+            display: block;
+            opacity: 1;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Слайды -->
+        <div class="slide active" id="slide1">
+            <h1>Проектная работа по воспитанию учеников 6 ,,Г" класса</h1>
+            <div class="project-info">
+                <h2>Команда проекта:</h2>
+                <ul>
+                    <li><strong>Плешовой Дарья:</strong> искала картинки</li>
+                    <li><strong>Алмакаев Салим:</strong> писал код</li>
+                    <li><strong>Шестакова Ясмина:</strong> помогала с поиском картинок</li>
+                    <li><strong>Бабамухамедов Давид:</strong> помогал с написанием кода</li>
+                    <li><strong>Абидов Диёрхужа:</strong> генерировал текст</li>
+            </div>
+        </div>
+        <div class="slide" id="slide2">
+            <h1>Сила благодарности</h1>
+            <p>Благодарность — это одна из самых мощных эмоций. Она не только меняет наше восприятие мира, но и улучшает наши отношения с окружающими. Каждое доброе слово и каждое хорошее дело создают круг благодарности, который возвращается к нам.</p>
+        </div>
+        <div class="slide" id="slide3">
+            <h1>Магия момента</h1>
+            <p>Каждая секунда жизни — это уникальный момент, который не повторится. Когда мы останавливаемся и замечаем мелочи, мы начинаем ценить каждый момент. Эта магия момента дарит нам вдохновение и радость, которые обогащают нашу жизнь.</p>
+        </div>
+        <div class="slide" id="slide4">
+            <h1>В сердце — благодарность</h1>
+            <p>Когда благодарность живет в нашем сердце, мы становимся более открытыми и добрыми. Она наполняет нас светом и дает нам возможность видеть мир с положительной стороны, даже в трудные времена. Пусть благодарность будет вашим путеводителем.</p>
+        </div>
+        <div class="slide" id="slide5">
+            <h1>Ценность простоты</h1>
+            <p>В современном мире, полном сложностей и технологий, простота становится настоящей роскошью. Открываясь простым вещам, мы находим настоящую ценность. Улыбка, хорошее слово, добрый жест — все это имеет большое значение и наполняет нас счастьем.</p>
+        </div>
+        <div class="slide" id="slide6">
+            <h1>Свет и тепло</h1>
+            <p>Благодарность — это свет, который освещает наш путь. Она согревает наши сердца и сердца окружающих нас людей. Проявляя благодарность, мы передаем этот свет дальше, создавая мир, наполненный добротой и теплом.</p>
+        </div>
+        <div class="slide" id="slide7">
+            <h1>Принимайте и любите</h1>
+            <p>Принятие и любовь идут рука об руку с благодарностью. Когда мы принимаем людей такими, какие они есть, и любим их без условий, мы создаем атмосферу, наполненную миром и гармонией. Позвольте благодарности вести вас в эту светлую сторону жизни.</p>
+        </div>
+        <!-- Управляющие кнопки -->
+        <div class="controls">
+            <button onclick="prevSlide()">Назад</button>
+            <button onclick="nextSlide()">Вперед</button>
+        </div>
+    </div>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+    </script>
+</body>
+</html>
